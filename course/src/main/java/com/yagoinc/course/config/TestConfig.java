@@ -11,7 +11,7 @@ import com.yagoinc.course.entities.User;
 import com.yagoinc.course.repositories.UserRepository;
 
 @Configuration
-@Profile(value = "test")
+@Profile("test")
 public class TestConfig implements CommandLineRunner {
 
 	@Autowired
