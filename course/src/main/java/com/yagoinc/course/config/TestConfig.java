@@ -30,12 +30,12 @@ public class TestConfig implements CommandLineRunner {
 		User u3 = new User(null, "Thiago Gonzalez", "thiago@mail", "977777777", "123456");
 		User u4 = new User(null, "Ciro Dourado", "ciro@mail", "977777777", "123456");
 
-		userRepository.saveAll(Arrays.asList(u1, u2, u3, u4));
-
 		Order o1 = new Order(null, Instant.parse("2022-02-15T18:35:24.00Z"), u1);
 		Order o2 = new Order(null, Instant.parse("2022-08-26T18:35:24.00Z"), u2);
+		Order o3 = new Order(null, Instant.parse("2022-08-26T18:35:24.00Z"), u4);
+		Order o4 = new Order(null, Instant.parse("2022-08-26T18:35:24.00Z"), u1);
 
-		orderRepository.saveAll(Arrays.asList(o1, o2));
+		userRepository.saveAll(Arrays.asList(u1, u2, u3, u4));
+		orderRepository.saveAll(Arrays.asList(o1, o2, o3, o4));
 	}
-
 }
