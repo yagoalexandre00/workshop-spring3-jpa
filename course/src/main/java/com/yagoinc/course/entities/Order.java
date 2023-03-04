@@ -78,7 +78,7 @@ public class Order implements Serializable {
 	public User getClient() {
 		return client;
 	}
-
+ 
 	public Set<OrderItem> getItems() {
 		return items;
 	}
